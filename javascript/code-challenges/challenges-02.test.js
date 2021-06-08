@@ -7,6 +7,11 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
+const raisedToTheThird = (arr) => {
+  // Solution code here...
+  let raisedArr=[];
+  arr.forEach(element => raisedArr.push(Math.pow(element,3)));
+  return raisedArr
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
@@ -20,6 +25,8 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   // Solution code here...
+  let incArr = arr.map(element => element+1);
+  return incArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,6 +37,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
+  let stringsArr = arr.map(element => `${element}?`);
+  return stringsArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +53,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+  let powArr=[];
+  for (let i = 0; i < arr.length; i++) {
+    powArr.push(Math.pow(2,arr[i]));
+  }
+  return powArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,6 +68,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  let powArr = [];
+  arr.forEach(element => powArr.push(Math.pow(2,element)));
+  return powArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +81,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  let powArr = arr.map(element => Math.pow(2,element));
+  return powArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,6 +97,8 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  let charArr = arr.map(element => element.charCodeAt());
+  return charArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +113,18 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  let evenoddArr = arr.map (element => {
+    if (element %2 === 0){
+      return 'even';
+    }
+    else if(element %2 === 1){
+      return 'odd';
+    }
+    else {
+      return 'N/A';
+    }
+  });
+  return evenoddArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -249,6 +282,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
+describe('Testing challenge 7', () => {
 xdescribe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
@@ -256,6 +290,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
+describe('Testing challenge 8', () => {
 xdescribe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
