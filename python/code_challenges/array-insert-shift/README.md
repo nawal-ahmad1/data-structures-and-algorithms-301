@@ -8,4 +8,4 @@ A function that takes an array and a value, and insert that value into the middl
 
 ## Approach & Efficiency
 
-I chose O(N), because the algorithm performance is increasing linearly and directly proportion to the input list size
+I chose O(N), because the algorithm performance is increasing linearly and directly proportion to the input list size.
