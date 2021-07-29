@@ -4,7 +4,7 @@ A function that takes an array and a value, and insert that value into the middl
 
 ## Whiteboard Process
 
-![array-insert-shift](python/code_challenges/array-insert-shift/assets/array-insert-shift.png)
+![array-insert-shift](python/code_challenges/array-insert-shift/assets/array-insert-ahift.jpg)
 
 ## Approach & Efficiency
 
