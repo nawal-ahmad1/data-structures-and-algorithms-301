@@ -6,13 +6,11 @@ from linked_list.linked_list import LinkedList, Node
 # instantiate an empty linked list
 
 
-def test_insert():
-    ll = LinkedList()
-    with pytest.raises(AttributeError):
-        ll.head.value
-    ll.insert(None)
-    actual = ll.head.value
-    assert actual == None
+def test_empty_linked_list():
+    actual = list(LinkedList())
+    expected = []
+    assert actual == expected
+
 
 # 2
 #  insert into the linked list
@@ -25,6 +23,7 @@ def test_insert():
     ll.insert(5)
     actual = ll.head.value
     assert actual == 5
+
 
 # 3
 # point to the first node in the linked list
