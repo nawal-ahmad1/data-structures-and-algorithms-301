@@ -5,7 +5,6 @@ CHALLENGE 1
 Write a function named `addOne` that takes an array of numbers, and returns a new array of the numbers, incremented by 1.
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-
 const addOne = (arr) => {
   // Solution code here...
   let arrOfNumbers = [];
@@ -21,9 +20,9 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-  let newArr = [];
-  arr.forEach(element => newArr.push(`${element}!`));
-  return newArr;
+  let arrOfStrings = [];
+  arr.forEach(element => arrOfStrings.push(`${element}!`));
+  return arrOfStrings;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,9 +33,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  let upperCase = [];
-  arr.forEach(element => upperCase.push(element.toUpperCase()));
-  return upperCase;
+  let toUpperArr = [];
+  arr.forEach(element => toUpperArr.push(element.toUpperCase()));
+  return toUpperArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,9 +52,9 @@ const greeting = (word) => {
 
 const speaker = (words, callback) => {
   // Solution code here...
-  let newArr = [];
-  words.forEach(element => newArr.push(callback(element)));
-  return newArr;
+  let arrOfStrings = [];
+  words.forEach(element => arrOfStrings.push(callback(element)));
+  return arrOfStrings;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,13 +95,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-  let newArr = [];
+  let arrOfStrings = [];
   availableItems.forEach((element) => {
     if (element.available === true) {
-      newArr.push(element.name);
+      arrOfStrings.push(element.name);
     }
   });
-  return newArr;
+  return arrOfStrings;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,19 +117,21 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-  let newArr = [];
+  let arrCrazy=[];
   arr.forEach(element => {
-    if (element % 3 === 0 && element % 5 !== 0) {
-      newArr.push('Fizz');
-    } else if (element % 5 === 0 && element % 3 !== 0) {
-      newArr.push('Buzz');
-    } else if (element % 3 === 0 && element % 5 === 0) {
-      newArr.push('Fizz Buzz');
-    } else {
-      newArr.push(element);
+    if ((element %3===0)&&(element % 5 ===0)){
+      arrCrazy.push('Fizz Buzz')
     }
+    else if (element % 3 ===0){
+      arrCrazy.push('Fizz')
+    }
+    else if (element % 5 ===0){
+      arrCrazy.push('Buzz')
+    }
+    else 
+    arrCrazy.push(element)
   });
-  return newArr;
+  return arrCrazy
 };
 
 /* ------------------------------------------------------------------------------------------------
