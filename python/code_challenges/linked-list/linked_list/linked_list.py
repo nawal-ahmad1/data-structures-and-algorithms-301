@@ -6,6 +6,9 @@ class Node():
     def __str__(self):
         return str(self.value)
 
+    def __add__(self, other):
+        return Node(self.value + other.value)
+
 class LinkedList():
     def __init__(self):
         self.head = None
@@ -26,14 +29,51 @@ class LinkedList():
             current = current.next
         return boolean
 
-    def __str__(self):
-            string = ""
-            current = self.head
-            while current:
-                string += f"{str(current.value)} -> "
+    def append(self,value):
+        current = Node(value)
+        last_node = self.head
+        while current:
+            if last_node.next == None:
+                last_node.next = current
+                break
+            last_node=last_node.next
+
+    def insert_before(self,flag,before):
+        head = self.head
+        next_value = self.head
+        node = Node(before)
+        if str(flag) == str(self.head):
+            self.insert(before)
+            return
+        while flag != next_value.value:
+            head = next_value
+            next_value = next_value.next
+        head.next = node
+        node.next = next_value
+
+    def insert_after(self,previous,value):
+        node = Node(value)
+        current = self.head
+        temp = self.head
+        while current.next!= None:
+            if current.value == previous:
+                temp = temp.next
+                current.next = node
                 current = current.next
-            string += "None"
-            return string
+                current.next = temp
+                return
+            current = current.next
+            temp = temp.next
+            self.append(value)
+
+    def __str__(self):
+        string = ""
+        current = self.head
+        while current:
+            string += f"{str(current.value)} -> "
+            current = current.next
+        string += "None"
+        return string
 
     def __iter__(self):
         # new_list = []
@@ -47,15 +87,35 @@ class LinkedList():
     def __repr__(self):
         return "LinkedList()"
 
+    def kthFromEnd(self,k):
+        last_node = len(self)-1
+
+        if last_node < k:
+            return ("Exception!")
+        steps = (len(self)-k)-1
+        current = self.head
+
+        while steps > 0 :
+            current = current.next
+            steps -= 1
+        return current.value
+
+
+
 
 if __name__ == "__main__":
     ll = LinkedList()
     ll.insert(7)
     ll.insert(9)
     ll.insert(11)
+    ll.insert(18)
+
     print(ll)
     node1 = Node(1)
     node2 = Node(2)
     print(node1)
     for value in ll:
         print(value)
+
+    ll.insert_before(18,55)
+    ll.insert_after(11,7)
