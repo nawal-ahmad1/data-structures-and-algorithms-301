@@ -76,19 +76,62 @@ def test_collection():
 
 #8
 #  add a node to the end of the linked list
+def test_add_end():
+    ll= LinkedList()
+    ll.insert(7)
+    ll.append(27)
+    assert ll.includes(27)
 
 #9
 # add multiple nodes to the end of a linked list
+def test_add_multiple():
+    ll= LinkedList()
+    ll.insert(7)
+    ll.append(27)
+    ll.append(37)
+    ll.append(40)
+    assert ll.includes(27)
 
 #10
-# insert a node before a node located i the middle of a linked list
+# insert a node before a node located in the middle of a linked list
+def test_add_to_middle():
+    ll= LinkedList()
+    ll.insert(7)
+    ll.insert(27)
+    ll.insert(35)
+    ll.insert(40)
+    ll.insert_before(35,15)
+    assert ll.includes(15)
 
 #11
 #insert a node before the first node of a linked list
+def test_add_befor_first():
+    ll= LinkedList()
+    ll.insert(4)
+    ll.insert(11)
+    ll.insert(25)
+    ll.insert(40)
+    ll.insert_before(40,35)
+    assert ll.includes(35)
 
 #12
 # insert after a node in the middle of the linked list
+def test_add_after_middle():
+    ll= LinkedList()
+    ll.insert(4)
+    ll.insert(11)
+    ll.insert(25)
+    ll.insert(40)
+    ll.insert_after(25,35)
+    assert ll.includes(35)
 
 #13
 # insert a node after the last node of the linked list
-
+def test_add_after_lasr():
+    ll= LinkedList()
+    ll.insert(4)
+    ll.insert(11)
+    ll.insert(25)
+    ll.insert(40)
+    ll.insert_after(40,50)
+    assert ll.includes(50)
