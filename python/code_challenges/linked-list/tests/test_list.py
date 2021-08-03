@@ -92,17 +92,3 @@ def test_collection():
 #13
 # insert a node after the last node of the linked list
 
-# 14
-# k is greater than the length of the linked list
-
-#15
-# Where k and the length of the list are the same
-
-#16
-# Where k is not a positive integer
-
-#17
-# Where the linked list is of a size 1
-
-#18
-# “Happy Path” where k is not at the end, but somewhere in the middle of the linked list

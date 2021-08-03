@@ -87,21 +87,6 @@ class LinkedList():
     def __repr__(self):
         return "LinkedList()"
 
-    def kthFromEnd(self,k):
-        last_node = len(self)-1
-
-        if last_node < k:
-            return ("Exception!")
-        steps = (len(self)-k)-1
-        current = self.head
-
-        while steps > 0 :
-            current = current.next
-            steps -= 1
-        return current.value
-
-
-
 
 if __name__ == "__main__":
     ll = LinkedList()
