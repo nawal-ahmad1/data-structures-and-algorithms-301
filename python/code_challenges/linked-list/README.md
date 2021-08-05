@@ -15,23 +15,23 @@ O(n) Time and O(n) space performance for kth method.
 
 ## Methods
 
-insert method
+**insert method**
 Takes a value as an argument and add new node to the head hold that value.
 
-includes method
+**includes method**
 Takes a value as an argument and returns a boolean.
 
-append method
+**append method**
 Takes a value as an argument and adds a new node to the end hold that.
+![append](python/code_challenges/linked-list/assets/append.jpg)
 
-insertBefore method
-Add a new node with the given new value before the first node
+**insertBefore method**
+Add a new node with the given new value before the first node.
+![insert_before](python/code_challenges/linked-list/assets/insert-before.jpg)
 
-insertAfter method
+**insertAfter method**
 Add a new node with the given new value after the first node.
+![insert_after](python/code_challenges/linked-list/assets/insert-after.jpg)
 
-kthFromEnd
+**kthFromEnd**
 Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
-
-str method
-returns a string with Linked List values: a -> b -> c -> NULL
