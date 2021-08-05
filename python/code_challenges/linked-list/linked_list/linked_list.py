@@ -28,15 +28,17 @@ class LinkedList():
                 break
             current = current.next
         return boolean
-
+      
     def append(self,value):
-        current = Node(value)
-        last_node = self.head
-        while current:
-            if last_node.next == None:
-                last_node.next = current
-                break
-            last_node=last_node.next
+        node=Node(value)
+        current=self.head
+        if current==None:
+            self.insert(value)
+            return
+        while current.next!=None:
+            current=current.next
+        current.next=node
+
 
     def insert_before(self,flag,before):
         head = self.head
@@ -64,7 +66,7 @@ class LinkedList():
                 return
             current = current.next
             temp = temp.next
-            self.append(value)
+        self.append(value)
 
     def __str__(self):
         string = ""
@@ -96,11 +98,12 @@ if __name__ == "__main__":
     ll.insert(18)
 
     print(ll)
-    node1 = Node(1)
-    node2 = Node(2)
-    print(node1)
-    for value in ll:
-        print(value)
+    # node1 = Node(1)
+    # node2 = Node(2)
+    # print(node1)
+    # for value in ll:
+    #     print(value)
 
     ll.insert_before(18,55)
-    ll.insert_after(11,7)
+    ll.insert_after(9,77)
+    print (ll)
