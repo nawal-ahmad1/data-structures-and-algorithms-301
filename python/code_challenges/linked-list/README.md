@@ -28,10 +28,4 @@ insertBefore method
 Add a new node with the given new value before the first node
 
 insertAfter method
-Add a new node with the given new value after the first node
-
-kthFromEnd
-Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
-
-str method
-returns a string with Linked List values: a -> b -> c -> NULL
+Add a new node with the given new value after the first node.
