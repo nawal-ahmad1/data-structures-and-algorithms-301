@@ -11,7 +11,6 @@ O(1) Time/space performance for insert method.
 O(n) Time and O(1) space performance for includes method.
 O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
-O(n) Time and O(n) space performance for kth method.
 
 ## API
 
