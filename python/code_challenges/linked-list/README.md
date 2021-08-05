@@ -12,21 +12,22 @@ O(n) Time and O(1) space performance for includes method.
 O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
 
-## API
+## Methods
 
-insert method
+**insert method**
 Takes a value as an argument and add new node to the head hold that value.
 
-includes method
+**includes method**
 Takes a value as an argument and returns a boolean.
 
-append method
+**append method**
 Takes a value as an argument and adds a new node to the end hold that.
+![append](python/code_challenges/linked-list/assets/append.jpg)
 
-insertBefore method
+**insertBefore method**
 Add a new node with the given new value before the first node.
 ![insert_before](python/code_challenges/linked-list/assets/insert-before.jpg)
 
-insertAfter method
+**insertAfter method**
 Add a new node with the given new value after the first node.
 ![insert_after](python/code_challenges/linked-list/assets/insert-after.jpg)
