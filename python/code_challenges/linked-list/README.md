@@ -24,7 +24,9 @@ append method
 Takes a value as an argument and adds a new node to the end hold that.
 
 insertBefore method
-Add a new node with the given new value before the first node
+Add a new node with the given new value before the first node.
+![insert_before](python/code_challenges/linked-list/assets/insert-before.jpg)
 
 insertAfter method
 Add a new node with the given new value after the first node.
+![insert_after](python/code_challenges/linked-list/assets/insert-after.jpg)
