@@ -13,7 +13,7 @@ O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
 O(n) Time and O(n) space performance for kth method.
 
-## API
+## Methods
 
 insert method
 Takes a value as an argument and add new node to the head hold that value.
@@ -34,5 +34,4 @@ kthFromEnd
 Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
 
 str method
-returns a string with Linked List values: a -> b -> c -> NULL
-
+returns a string with Linked List values: a -> b -> c -> NULL.

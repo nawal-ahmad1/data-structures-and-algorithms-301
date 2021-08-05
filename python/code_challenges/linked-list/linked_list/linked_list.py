@@ -28,7 +28,7 @@ class LinkedList():
                 break
             current = current.next
         return boolean
-
+      
     def append(self,value):
         node=Node(value)
         current=self.head
@@ -38,33 +38,35 @@ class LinkedList():
         while current.next!=None:
             current=current.next
         current.next=node
-    # def insert_before(self,flag,before):
-    #     head = self.head
-    #     next_value = self.head
-    #     node = Node(before)
-    #     if str(flag) == str(self.head):
-    #         self.insert(before)
-    #         return
-    #     while flag != next_value.value:
-    #         head = next_value
-    #         next_value = next_value.next
-    #     head.next = node
-    #     node.next = next_value
 
-    # def insert_after(self,previous,value):
-    #     node = Node(value)
-    #     current = self.head
-    #     temp = self.head
-    #     while current.next!= None:
-    #         if current.value == previous:
-    #             temp = temp.next
-    #             current.next = node
-    #             current = current.next
-    #             current.next = temp
-    #             return
-    #         current = current.next
-    #         temp = temp.next
-    #         self.append(value)
+
+    def insert_before(self,flag,before):
+        head = self.head
+        next_value = self.head
+        node = Node(before)
+        if str(flag) == str(self.head):
+            self.insert(before)
+            return
+        while flag != next_value.value:
+            head = next_value
+            next_value = next_value.next
+        head.next = node
+        node.next = next_value
+
+    def insert_after(self,previous,value):
+        node = Node(value)
+        current = self.head
+        temp = self.head
+        while current.next!= None:
+            if current.value == previous:
+                temp = temp.next
+                current.next = node
+                current = current.next
+                current.next = temp
+                return
+            current = current.next
+            temp = temp.next
+        self.append(value)
 
     def __str__(self):
         string = ""
@@ -87,18 +89,24 @@ class LinkedList():
     def __repr__(self):
         return "LinkedList()"
 
-    # def kthFromEnd(self,k):
-    #     last_node = len(self)-1
 
-    #     if last_node < k:
-    #         return ("Exception!")
-    #     steps = (len(self)-k)-1
-    #     current = self.head
-
-    #     while steps > 0 :
-    #         current = current.next
-    #         steps -= 1
-    #     return current.value
+    def kthFromEnd(self,k):
+        current=self.head
+        list_len=1
+        while current.next:
+            list_len += 1
+            current = current.next
+        current = self.head
+        if k < 0:
+            return "K value should be positive"
+        elif k >= list_len:
+            return "K is out of range "
+        else:
+            count =list_len-k-1
+            for i in range(list_len):
+                    if i == count:
+                        return current.value
+                    current =current.next  
 
 def zipLists(list1,list2):
     current1 = list1.head
@@ -121,8 +129,8 @@ def zipLists(list1,list2):
             current2 = current2.next
     output=''
     for i in zip_list:
-        output+=f'{i}-> '
-    output+='None'
+        output += f'{i}-> '
+    output += 'None'
     return output
 
 
