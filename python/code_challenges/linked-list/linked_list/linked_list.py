@@ -90,6 +90,28 @@ class LinkedList():
         return "LinkedList()"
 
 
+    def kthFromEnd(self,k):
+        current=self.head
+        list_len=1
+        while current.next:
+            list_len += 1
+            current = current.next
+        current = self.head
+        if k < 0:
+            return "K value should be positive"
+        elif k == list_len:
+            return "K should be in the range of list length"
+        elif k > list_len:
+            return "K is out of range "
+        else:
+            count =list_len-k-1
+            for i in range(list_len):
+                    if i == count:
+                        return current.value
+                    current =current.next    
+
+
+
 if __name__ == "__main__":
     ll = LinkedList()
     ll.insert(7)
@@ -98,11 +120,6 @@ if __name__ == "__main__":
     ll.insert(18)
 
     print(ll)
-    # node1 = Node(1)
-    # node2 = Node(2)
-    # print(node1)
-    # for value in ll:
-    #     print(value)
 
     ll.insert_before(18,55)
     ll.insert_after(9,77)

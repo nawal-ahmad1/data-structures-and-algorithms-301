@@ -11,6 +11,7 @@ O(1) Time/space performance for insert method.
 O(n) Time and O(1) space performance for includes method.
 O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
+O(n) Time and O(n) space performance for kth method.
 
 ## Methods
 
@@ -31,3 +32,7 @@ Add a new node with the given new value before the first node.
 **insertAfter method**
 Add a new node with the given new value after the first node.
 ![insert_after](python/code_challenges/linked-list/assets/insert-after.jpg)
+
+**kthFromEnd**
+Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
+![kth](python/code_challenges/linked-list/assets/kth.jpg)
