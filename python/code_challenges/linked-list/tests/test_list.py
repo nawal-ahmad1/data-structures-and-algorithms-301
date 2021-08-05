@@ -152,11 +152,11 @@ def test_k_greater_length():
 # Where k and the length of the list are the same
 def test_k_equal_length():
     ll=LinkedList()
-    ll.insert(11) //2
-    ll.insert(22) //1
-    ll.insert(33) //0
+    ll.insert(11) #2
+    ll.insert(22) #1
+    ll.insert(33) #0
     actual = ll.kthFromEnd(3)
-    excepted = "K is out of range "
+    excepted = "K should be in the range of list length"
     assert excepted == actual
 
 #16

@@ -99,7 +99,9 @@ class LinkedList():
         current = self.head
         if k < 0:
             return "K value should be positive"
-        elif k >= list_len:
+        elif k == list_len:
+            return "K should be in the range of list length"
+        elif k > list_len:
             return "K is out of range "
         else:
             count =list_len-k-1
@@ -118,23 +120,7 @@ if __name__ == "__main__":
     ll.insert(18)
 
     print(ll)
-<<<<<<< HEAD
-    node1 = Node(1)
-    node2 = Node(2)
-    print(node1)
-    for value in ll:
-        print(value)
-
-    ll.insert_before(18,55)
-    ll.insert_after(11,7)
-=======
-    # node1 = Node(1)
-    # node2 = Node(2)
-    # print(node1)
-    # for value in ll:
-    #     print(value)
 
     ll.insert_before(18,55)
     ll.insert_after(9,77)
     print (ll)
->>>>>>> d2bc91ddde174956eb801a5242c0d9bc9fe677e8

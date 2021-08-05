@@ -35,3 +35,4 @@ Add a new node with the given new value after the first node.
 
 **kthFromEnd**
 Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
+![kth](python/code_challenges/linked-list/assets/kth.jpg)
