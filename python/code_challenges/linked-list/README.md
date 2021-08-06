@@ -12,26 +12,34 @@ O(n) Time and O(1) space performance for includes method.
 O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
 O(n) Time and O(n) space performance for kth method.
+O(n) Time and O(n) space performance for zipLists method.
 
 ## Methods
 
-insert method
+returns a string with Linked List values: a -> b -> c -> NULL.
+=======
+**insert method**
 Takes a value as an argument and add new node to the head hold that value.
 
-includes method
+**includes method**
 Takes a value as an argument and returns a boolean.
 
-append method
+**append method**
 Takes a value as an argument and adds a new node to the end hold that.
+![append](python/code_challenges/linked-list/assets/append.jpg)
 
-insertBefore method
-Add a new node with the given new value before the first node
+**insertBefore method**
+Add a new node with the given new value before the first node.
+![insert_before](python/code_challenges/linked-list/assets/insert-before.jpg)
 
-insertAfter method
-Add a new node with the given new value after the first node
+**insertAfter method**
+Add a new node with the given new value after the first node.
+![insert_after](python/code_challenges/linked-list/assets/insert-after.jpg)
 
-kthFromEnd
+**kthFromEnd**
 Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
+![kth](python/code_challenges/linked-list/assets/kth.jpg)
 
-str method
-returns a string with Linked List values: a -> b -> c -> NULL.
+**zipLists**
+Zip two linked lists together into one with nodes alternate between the two lists and return a reference to the head of the zipped list.
+![zip lists](python/code_challenges/linked-list/assets/zip-lists.jpg)

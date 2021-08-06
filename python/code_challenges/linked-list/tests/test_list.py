@@ -156,7 +156,7 @@ def test_k_equal_length():
     ll.insert(22) #1
     ll.insert(33) #0
     actual = ll.kthFromEnd(3)
-    excepted = "K is out of range "
+    excepted = "K should be in the range of list length"
     assert excepted == actual
 
 #16
