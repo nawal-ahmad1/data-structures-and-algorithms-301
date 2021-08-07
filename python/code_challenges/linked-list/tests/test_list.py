@@ -1,6 +1,6 @@
 import pytest
 
-from linked_list.linked_list import LinkedList, Node
+from linked_list.linked_list import *
 
 # 1
 # instantiate an empty linked list
@@ -15,7 +15,7 @@ def test_empty_linked_list():
 # 2
 #  insert into the linked list
 
-def test_inser():
+def test_insert():
     ll = LinkedList()
     with pytest.raises(AttributeError):
         ll.head.value
@@ -190,3 +190,19 @@ def test_k_negative():
     actual = ll.kthFromEnd(2)
     excepted = 33
     assert excepted == actual
+
+#19 Test zip lists
+def test_zipLists():
+    ll1=LinkedList()
+    ll1.append(1)
+    ll1.append(3)
+    ll1.append(2)
+
+    ll2=LinkedList()
+    ll2.append(5)
+    ll2.append(9)
+    ll2.append(4)
+
+    actual=zipLists(ll1,ll2).__str__()
+    expected = '1-> 5-> 3-> 9-> 2-> 4-> None'
+    assert expected == actual
