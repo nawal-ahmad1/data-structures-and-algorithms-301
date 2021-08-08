@@ -1,7 +1,7 @@
 # Stacks and Queues
 
 ## Code Challenge: Stacks and Queues
-A stack is a data structure that consists of Nodes depends on last in last out.
+A stack is a data structure that consists of Nodes depends on --> last in last out.
 
 ## Challenge
 Create stack class with push, pop, peek and is empty methods. 
@@ -34,3 +34,12 @@ Create queue class with enqueue, dequeue, peek and is empty methods.
 **dequeue**: remove from the queue.
 **peek**: view the value of the front Node in the queue.
 **is_empty** returns true when queue is empty.
+
+### Queues Pseudo 
+Create PseudoQueue class depends on first in first out for stack methods.
+**enqueue**: add to the stack.
+**dequeue**: remove first in element from the stack. 
+
+**For Queues Pseudo Approach**
+- enqueue : O(1)
+- dequeue : O(1)
