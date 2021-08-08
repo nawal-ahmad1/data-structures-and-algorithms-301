@@ -40,6 +40,15 @@ class Stack:
             return False
         return True
 
+    def __str__(self):
+        if self.top:
+            string = ""
+            current = self.top
+            while current != None:
+                string += str(current.value) + ' '
+                current = current.next
+            return string
+
 
 class Queue():
     def __init__(self):
@@ -76,3 +85,12 @@ class Queue():
         if self.front:
             return False
         return True
+
+    def __str__(self):
+        if self.front:
+            string = ""
+            current = self.front
+            while current != None:
+                string += str(current.value) + ' '
+                current = current.next
+            return string
