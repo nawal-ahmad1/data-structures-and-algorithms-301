@@ -7,3 +7,4 @@
 | array-insert-shift  | [array-insert-shift](/home/nawal/ASAC/301/data-structures-and-algorithms/python/code_challenges/array-insert-shift/README.md)   |
 | array-binary-search | [array-binary-search](/home/nawal/ASAC/301/data-structures-and-algorithms/python/code_challenges/array-binary-search/README.md) |
 | linked-list         | [linked-list](/home/nawal/ASAC/301/data-structures-and-algorithms/python/code_challenges/linked-list/README.md)                 |
+| stack-and-queue     | [stack-and-queue](/home/nawal/ASAC/401/data-structures-and-algorithms/python/code_challenges/stack-and-queue/README.md)         |

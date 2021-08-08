@@ -12,9 +12,12 @@ O(n) Time and O(1) space performance for includes method.
 O(n) Time and O(1) space performance for insert_before method.
 O(n) Time and O(1) space performance for insert_after method.
 O(n) Time and O(n) space performance for kth method.
+O(n) Time and O(n) space performance for zipLists method.
 
 ## Methods
 
+returns a string with Linked List values: a -> b -> c -> NULL.
+=======
 **insert method**
 Takes a value as an argument and add new node to the head hold that value.
 
@@ -36,3 +39,7 @@ Add a new node with the given new value after the first node.
 **kthFromEnd**
 Takes a number (k) as a parameter and return the node’s value that is k from the end of the linked list.
 ![kth](python/code_challenges/linked-list/assets/kth.jpg)
+
+**zipLists**
+Zip two linked lists together into one with nodes alternate between the two lists and return a reference to the head of the zipped list.
+![zip lists](python/code_challenges/linked-list/assets/zip-lists.jpg)
