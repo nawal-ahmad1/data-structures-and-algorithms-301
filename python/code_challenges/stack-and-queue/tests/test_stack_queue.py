@@ -1,4 +1,5 @@
 from stack_and_queue.stack_and_queue import *
+
 # import pytest
 
 # test push onto a stack
@@ -111,3 +112,41 @@ def test_exception_queue():
     queue = Queue()
     actual = queue.peek()
     assert actual == "Queue is empty"
+
+
+# Stack enqueue 
+def test_pseudo_enqueue():
+    psq = PseudoQueue()
+    psq.enqueue(10)
+    actual = psq.stack1.top.value
+    assert actual == 10
+
+# Stack enqueue multiple
+def test_pseudo_enqueue_multiple():
+    psq = PseudoQueue()
+    psq.enqueue(10)
+    psq.enqueue(20)
+    actual = psq.stack1.top.value
+    assert actual == 20
+
+# Stack dequeue 
+def test_pseudo_dequeue():
+    psq = PseudoQueue()
+    psq.enqueue(10)
+    actual = psq.dequeue()
+    assert actual == 10
+
+# Stack dequeue multiple
+def test_pseudo_dequeue_multiple():
+    psq = PseudoQueue()
+    psq.enqueue(10)
+    psq.enqueue(20)
+    psq.enqueue(30)
+    actual = psq.dequeue()
+    assert actual == 10
+
+#raises exception
+def test_pseudo_exception():
+    psq = PseudoQueue()
+    actual = psq.dequeue()
+    assert actual == "Stack is empty"
