@@ -53,3 +53,13 @@ Create Animal Shelter Queue and Dog class and Cat class adding and removing only
 **For tack queue animal shelter Approach**
 - enqueue : O(1)
 - dequeue : O(1)
+
+
+
+### stack queue brackets
+Create queue brackets function take a string as input and return True if all opening brackets have their closing ones else return False.
+
+**For stack queue brackets Approach**
+BigO: O(N)
+
+![stack queue brackets](python/code_challenges/stack-and-queue/assets/stack_queue_brackets.jpg)

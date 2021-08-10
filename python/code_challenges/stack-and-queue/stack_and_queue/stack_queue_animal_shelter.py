@@ -1,3 +1,5 @@
+from stack_and_queue.stack_and_queue import Queue
+from stack_and_queue.stack_and_queue import Queue
 class Cat():
     def __init__(self,value = 'cat'):
         self.value=value
