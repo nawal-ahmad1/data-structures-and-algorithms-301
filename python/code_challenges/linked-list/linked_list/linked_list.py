@@ -99,6 +99,7 @@ class LinkedList():
         current = self.head
         if k < 0:
             return "K value should be positive"
+
         elif k == list_len:
             return "K should be in the range of list length"
         elif k > list_len:
@@ -108,19 +109,45 @@ class LinkedList():
             for i in range(list_len):
                     if i == count:
                         return current.value
-                    current =current.next    
+                    current =current.next  
+
+def zipLists(list1,list2):
+    current1 = list1.head
+    current2 = list2.head
+    if current1 == None or current2 == None:
+        if current1:
+            return list1.__str
+        elif current2:
+            return list2.__str__
+        else:
+            return "Both Lists are empty"
+                
+    zip_list=[]
+    while current1 or current2:
+        if current1:
+            zip_list += [current1.value]
+            current1 = current1.next
+        if current2:
+            zip_list += [current2.value]
+            current2 = current2.next
+            
+    output=''
+    for i in zip_list:
+        output += f'{i}-> '
+    output += 'None'
+    return output
 
 
 
 if __name__ == "__main__":
-    ll = LinkedList()
-    ll.insert(7)
-    ll.insert(9)
-    ll.insert(11)
-    ll.insert(18)
-
-    print(ll)
-
-    ll.insert_before(18,55)
-    ll.insert_after(9,77)
-    print (ll)
+    list1=LinkedList()
+    list2=LinkedList()
+    list1.append(1)
+    list1.append(3)
+    list1.append(5)
+    list2.append(2)
+    list2.append(4)
+    list2.append(6)
+    print(list1.__str__())
+    print(list2.__str__())
+    print(zipLists(list1,list2).__str__())
