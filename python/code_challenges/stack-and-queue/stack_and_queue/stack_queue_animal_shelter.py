@@ -7,7 +7,6 @@ class Cat():
         return f"{self.value}"
 
 
-
 class Dog():
     def __init__(self,value = 'dog'):
         self.value=value
@@ -38,11 +37,16 @@ class  AnimalShelter:
             self.rear = animal
 
     def dequeue(self,pref):
-        if pref =='cat' or pref =='dog':
-            current = self.front
-            self.front = current.next
-            current.next = None    
-            return current     
+        if pref =='cat':
+            temp = self.front
+            self.front = self.front.next
+            temp.next = None    
+            return temp.value    
+        elif pref == 'dog':
+            temp = self.front
+            self.front = self.front.next
+            temp.next = None    
+            return temp.value             
         else:
             return 'null'
 
@@ -62,11 +66,10 @@ if __name__ == "__main__":
     sq.enqueue('dog')
     sq.enqueue('dog')
     sq.enqueue('cat')
-    sq.enqueue('dog')
-    print(sq.front)
+    # print(sq.front)
 
-    # sq.dequeue('dog')
-    # sq.dequeue('dog')
+    sq.dequeue('dog')
+    sq.dequeue('dog')
     print((sq))
 
 

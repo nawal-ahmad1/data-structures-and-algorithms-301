@@ -7,19 +7,10 @@ def test_empty():
 
 def test_enqueue():
     pass
-    # mesha = Cat('mesha')
-    # animal_shelter = AnimalShelter()
-    # animal_shelter.enqueue(mesha)
-    # actual = animal_shelter.front
-    # assert actual == 'mesha'
 
 def test_enqueue_multiple():
     pass
-    # animal = AnimalShelter()
-    # animal.enqueue('masha')
-    # animal.enqueue('lolo')
-    # actual = animal.front
-    # assert actual == None
+
 
 def test_dequeue():
     pass
