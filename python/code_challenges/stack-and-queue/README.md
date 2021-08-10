@@ -43,3 +43,13 @@ Create PseudoQueue class depends on first in first out for stack methods.
 **For Queues Pseudo Approach**
 - enqueue : O(1)
 - dequeue : O(1)
+
+### stack queue animal shelter
+Create Animal Shelter Queue and Dog class and Cat class adding and removing only dogs and cats as First In First Out concept.
+
+**enqueue**: add to the queue.
+**dequeue**: remove first in element from the queue. 
+
+**For tack queue animal shelter Approach**
+- enqueue : O(1)
+- dequeue : O(1)

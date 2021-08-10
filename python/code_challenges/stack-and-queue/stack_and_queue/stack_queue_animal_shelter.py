@@ -24,24 +24,53 @@ class  AnimalShelter:
 
     def enqueue(self,animal):
         if animal == 'cat':
-            new_animal = Cat()
+            animal = Cat()
         elif animal == 'dog':
-            new_animal = Dog()
+            animal = Dog()
         else:
-            return "There is no new animal"
+            animal = None
 
         if not self.front:
-            self.front = new_animal
-            self.rear = new_animal
+            self.front = animal
+            self.rear = animal
         else:
-            self.rear.next = new_animal
-            self.rear = new_animal
+            self.rear.next = animal
+            self.rear = animal
 
     def dequeue(self,pref):
-        pass
+        if pref =='cat' or pref =='dog':
+            current = self.front
+            self.front = current.next
+            current.next = None    
+            return current     
+        else:
+            return 'null'
+
 
     def __str__(self):
-        pass
+        if self.front:
+            string = ""
+            current = self.front
+            while current != None:
+                string += str(current.value) + ' '
+                current = current.next
+            return string
+
+if __name__ == "__main__":
+    sq = AnimalShelter()
+    sq.enqueue('cat')
+    sq.enqueue('dog')
+    sq.enqueue('dog')
+    sq.enqueue('cat')
+    sq.enqueue('dog')
+    print(sq.front)
+
+    # sq.dequeue('dog')
+    # sq.dequeue('dog')
+    print((sq))
+
+
+
 
 
 
